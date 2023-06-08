@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styleregistration.css">
+</head>
+
+<body>
+    <div class="parentDiv">
+        <div class="registerForm">
+            <h1 class="heading">Registeration Form</h1>
+            <form autocomplete="on">
+                <!-- first name -->
+                <div>
+                    <label for="firstName">First name:</label>
+                    <input class="inputTag" type="text" placeholder="First name" id="firstName" required>
+
+                </div>
+                <!-- last name -->
+                <div>
+                    <label for="lastName">Last name:</label>
+
+                    <input class="inputTag" type="text" placeholder="Last name" id="lastName" required>
+
+                </div>
+                <!-- date of birth -->
+                <div>
+                    <label for="dob">Date of Birth</label>
+
+                    <input class="inputTag" type="date" placeholder="Date of Birth" id="dob" required>
+
+                </div>
+                <!-- age -->
+                <div>
+                    <label for="age">Age</label>
+
+                    <input class="inputTag" type="number" placeholder="Age" id="age" required>
+
+                </div>
+                <!-- gender -->
+                <div>
+                    <label for="gender">Gender</label><br>
+                    <label for="male">Male</label>
+                    <input type="radio" id="male" name="gender" required>
+
+                    <label for="female">Female</label>
+                    <input type="radio" id="female" name="gender" required>
+
+                </div>
+                <!-- phone number -->
+                <div>
+                    <label for="number">Phone Number</label>
+
+                    <input class="inputTag" type="tel" pattern="[0-9]{10}" placeholder="Phone number" id="number"
+                        required>
+
+                </div>
+                <!-- email address -->
+                <div>
+                    <label for="email">Email Address</label>
+
+                    <input class="inputTag" type="email" placeholder="Email address" id="email" required>
+
+                </div>
+                <!-- address -->
+                <div>
+                    <label for="address">Address</label>
+
+                    <textarea class="inputTag" type="text" placeholder="Address" id="address" required></textarea>
+                </div>
+                <!-- state dropdown -->
+                <div>
+                    <label for="">Select yor state from the drop down</label>
+
+                    <Select required>
+                        <option value="" selected disabled>Select your state</option>
+                        <option value="Kerala">Kerala</option>
+                        <option value="Karnataka">Karnataka</option>
+                        <option value="TamilNadu">TamilNadu</option>
+                        <option value="Maharashtra">Maharashtra</option>
+
+                    </Select>
+                </div>
+                <!-- city dropdown -->
+
+                <div>
+                    <label for="">Select yor city from the drop down</label>
+
+                    <Select required>
+                        <option value="" selected disabled>Select your city</option>
+                        <option value="Thrissur">Thrissur</option>
+                        <option value="Wayanad">Wayanad</option>
+                        <option value="Thiruvanthapuram">Thiruvanthapuram</option>
+                        <option value="Kochi">Kochi</option>
+
+                    </Select>
+                </div>
+                <!-- username -->
+                <div>
+                    <label for="username">Username</label>
+
+                    <input class="inputTag" type="text" placeholder="Username" id="username">
+
+                </div>
+                <!-- password -->
+                <div>
+                    <label for="pswd">Password</label>
+
+                    <input class="inputTag" type="password" placeholder="Password" id="pswd">
+
+                </div>
+                <!-- confirm password -->
+                <div>
+                    <label for="cpswd">Confirm Password</label>
+
+                    <input class="inputTag" type="password" placeholder="Confirm Password" id="cpswd">
+                </div>
+<div>
+    <button class="button">Sign Up</button>
+
+</div>
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>

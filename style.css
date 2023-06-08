@@ -1,0 +1,45 @@
+body{
+    /* background-image: url("https://cdn.pixabay.com/photo/2018/02/02/17/29/nature-3125912_960_720.jpg"); */
+}
+nav{
+    width: 100%;
+}
+li{
+    display: inline;
+    margin-left:20px ;
+    margin-right:20px ;
+vertical-align:middle;
+}
+.section{
+    padding:20px;
+}
+.sectionalDiv{
+    width:100%;
+    background-color: aqua;
+    height: 80vh;
+}
+.sectionalDiv{
+    display: flex;
+    flex-direction: row;
+
+}
+.image-slider{
+    display: flex;
+    flex-direction: row;
+}
+.logoImage{
+    width:5%;
+
+}
+footer{
+text-align: center;
+}
+.slider{
+    width: 100%;
+}
+.slider div{
+    width: 100%;
+}
+.slider div img{
+    width: 100%;
+}
