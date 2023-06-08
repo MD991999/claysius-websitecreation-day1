@@ -43,3 +43,13 @@ text-align: center;
 .slider div img{
     width: 100%;
 }
+.socialMediaIcons{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10px;
+}
+.socialMediaIcons div{
+margin-left: 10px;
+}
