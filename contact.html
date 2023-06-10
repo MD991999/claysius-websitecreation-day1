@@ -5,37 +5,63 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styleaboutcontact.css">
+    <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
         integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Acme&family=Cormorant+Infant:ital,wght@1,300;1,500&family=EB+Garamond:wght@400;500&family=Eczar:wght@400;500&family=Fredericka+the+Great&family=Labrada&family=Satisfy&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="stylecontactsession.css">
+    <link rel="stylesheet" href="mediacontact.css">
     <title>Contact Us</title>
 </head>
 
 <body>
+
     <div class="conatactContainer">
         <h1 class="headingContactsession">Contact Us</h1>
 
         <div class="parentdivContactsession">
             <div class="formTagDiv">
                 <form class="formTag">
+                    <!-- full name -->
+
                     <div>
-                        <label for="fullname">Full Name</label><br>
-                        <input type="text" placeholder="Full Name" name="fullname">
+                        <label for="fullname" class="inputTagname">Full Name:</label><br>
+                        <input class="inputFullname" type="text" placeholder="Full Name" name="fullname" id="inputName"
+                            onfocusout="validateName()"><br>
+                        <span class="validateNameError" style="color:  rgb(207, 55, 55);font-size: 20px;font-weight: 600;"></span>
                     </div>
+                    <!-- email -->
                     <div>
-                        <label for="email">Email</label><br>
-                        <input type="email" placeholder="email" name="email">
+                        <label for="email" class="inputTagname">Email</label><br>
+                        <input type="email" placeholder="email" name="email" id="inputEmail"
+                            onfocusout="validateEmail()"><br>
+                        <span class="validateEmailError" style="color: rgb(207, 55, 55);font-size: 20px;font-weight: 600;"></span>
                     </div>
-                    <label for="text">Message</label><br>
-                    <textarea cols="30" rows="10" placeholder="Message"></textarea>
+                    <!-- mobile -->
+                    <div>
+                        <label for="mob" class="inputTagname">Mobile</label><br>
+                        <input type="tel" pattern="[0-9]{10}" placeholder="Mobile Number" name="mob" id="inputmob"
+                            onfocusout="validateMobile()"><br>
+                        <span class="validateMobileError" style="color: rgb(207, 55, 55);font-size: 20px;font-weight: 600;"></span>
+                    </div>
+                    <!-- message -->
+                    <div>
+                        <label for="text" class="inputTagname">Message</label><br>
+                        <textarea cols="30" rows="3" placeholder="Message" id="inputMessage"
+                            onfocusout="validateMessage()"></textarea><br>
+                        <span class="validateMessageError" style="color: rgb(207, 55, 55);font-size: 20px;font-weight: 600;"></span>
+                    </div>
                     <div class="divButton">
-                        <button class="button">Submit</button>
+                        <button class="button" type="button">Submit</button>
 
                     </div>
                 </form>
             </div>
-
             <div class="googleMap">
                 <iframe class="iframeGooglemap"
                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d62489.974496527066!2d76.1441390530513!3d11.79154450915616!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba5e16f5a3d78bf%3A0xbde53e7f53775815!2sPulpally%2C%20Kerala%20673579!5e0!3m2!1sen!2sin!4v1686225371919!5m2!1sen!2sin"
@@ -43,29 +69,106 @@
                     referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
         </div>
-
-
         <div class="detailsAdmin">
-            <div>
-                <h3><i class="fa-solid fa-location-dot"></i> Address:</h3>
-                <p>Poovathottathil(H)</p>
-                <p>(P O) Sasimala</p>
-                <p>Wayanad</p>
-            </div> 
-            <div>
-                <h3><i class="fa-solid fa-phone"></i>Phone:</h3>
-                <span>7306946106</span>
+            <div class="DetailsofWebsite">
+                <div class="headingAdmindetails"><i class="fa-solid fa-location-dot"></i> Address:</div>
+                <div class="ii">
+                    <p>Gold Tower</p>
+                    <p>Kakkanad</p>
+                    <p>Wayanad</p>
+                </div>
+
             </div>
-            <div>
+            <div class="DetailsofWebsite">
+                <h3 class="headingAdmindetails"><i class="fa-solid fa-phone"></i>Phone:</h3>
+                <div class="ii">7306946106</div>
+            </div>
+            <div class="DetailsofWebsite">
                 <h3><i class="fa-solid fa-envelope"></i>Email:</h3>
-                <span>devassiamichelle9@gmail.com</span>
+                <p>d@gmail.com</p>
             </div>
-            <div>
+            <div class="DetailsofWebsite">
                 <h3><i class="fa-sharp fa-solid fa-globe"></i>Website:</h3>
-                <span>website.com</span>
+                <p>website.com</p>
             </div>
         </div>
     </div>
 </body>
+<script>
+    // JavaScript
+    // email-validation
+    function validateEmail() {
+        const inputEmail = document.getElementById("inputEmail");
+        const errorSpan = document.querySelector(".validateEmailError");
+        const emailpattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+        if (inputEmail.value.trim() === "") {
+            errorSpan.textContent = "Email address is required.";
+        } else if (!emailpattern.test(inputEmail.value.trim()))
+        //   The test method is used to test if a string matches a regular expression. It returns true if the pattern is found in the string, and false otherwise.
+        {
+            errorSpan.textContent = "Invalid email address.";
+        } else {
+            errorSpan.textContent = "";
+        }
+    }
+
+    // mobile validation
+    function validateMobile() {
+        const inputMob = document.getElementById("inputmob")
+        const validateMobileError = document.getElementsByClassName("validateMobileError")[0]
+        if (inputMob.value.trim() === "") {
+            validateMobileError.textContent = "Mobile Number is required"
+        }
+        else if (!inputMob.checkValidity())
+        // It also uses the checkValidity() method to verify if the entered value matches the specified pattern ([0-9]{10}) for a 10-digit mobile number.
+        {
+            validateMobileError.textContent = "Invalid mobile number.";
+        } else {
+            validateMobileError.textContent = "";
+        }
+    }
+    // message validation
+    function validateMessage() {
+        const inputMessage = document.getElementById('inputMessage')
+        const validateMessageError = document.getElementsByClassName('validateMessageError')[0]
+        if (inputMessage.value.trim() === "") {
+            validateMessageError.textContent = "Message is required."
+        }
+        else {
+            validateMessageError.textContent = ""
+
+        }
+    }
+    // name validation
+    function validateName() {
+
+        const inputName = document.getElementById('inputName')
+        const validateNameError = document.getElementsByClassName('validateNameError')[0]
+        if (inputName.value.trim() === "") {
+            validateNameError.textContent = "Message is required."
+        }
+        else if (!/^[A-Z]/.test(inputName.value.trim())) {
+            validateNameError.textContent = "First letter should be capital letter"
+
+        }
+        else {
+            validateNameError.textContent = ""
+
+        }
+
+
+    }
+
+
+
+
+
+
+
+
+
+
+</script>
 
 </html>

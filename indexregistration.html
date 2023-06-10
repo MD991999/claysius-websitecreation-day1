@@ -6,126 +6,174 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="styleregistration.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="mediaregistration.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Acme&family=Cormorant+Infant:ital,wght@1,300;1,500&family=EB+Garamond:wght@400;500&family=Eczar:wght@400;500&family=Fredericka+the+Great&family=Labrada&family=Satisfy&display=swap"
+        rel="stylesheet">
 </head>
 
 <body>
     <div class="parentDiv">
         <div class="registerForm">
-            <h1 class="heading">Registeration Form</h1>
+            <h1 class="heading">Registration Form</h1>
             <form autocomplete="on">
-                <!-- first name -->
-                <div>
-                    <label for="firstName">First name:</label>
-                    <input class="inputTag" type="text" placeholder="First name" id="firstName" required>
+                <div class="leftRightContainer">
+                    <div class="leftSession">
+                        <!-- firstname and lastname -->
+                        <div class="formatPackage">
+                            <!-- first name -->
+                            <div>
+                                <label for="firstName">First name:</label><br>
+                                <input class="inputTag" type="text" placeholder="First name" id="firstName" required>
+                                <span style="color: red;"></span>
+
+                            </div>
+                            <!-- last name -->
+                            <div>
+                                <label for="lastName">Last name:</label><br>
+                                <input class="inputTag" type="text" placeholder="Last name" id="lastName" required>
+                                <span style="color: red;"></span>
+
+                            </div>
+                        </div>
+
+                        <!-- dob and age -->
+                        <div class="formatPackage">
+                            <!-- date of birth -->
+                            <div>
+                                <label for="dob">Date of Birth</label><br>
+                                <input class="inputTag" type="date" placeholder="Date of Birth" id="dob" required
+                                    oninput="ageCalculation()">
+                                <span style="color: red;"></span>
+
+                            </div>
+                            <!-- age -->
+                            <div>
+                                <label for="age">Age</label><br>
+                                <input class="inputTag" type="number" placeholder="Age" id="age" required>
+                                <span style="color: red;"></span>
+
+                            </div>
+                        </div>
+
+                        <!-- gender and phome number -->
+                        <div class="formatPackage">
+                            <!-- gender -->
+                            <div>
+                                <label for="gender">Gender</label><br>
+                                <!-- <input type="text" onfocusout="validateRadio()"> -->
+                                <label for="male">Male</label>
+                                <input type="radio" id="male" name="gender" onfocusout="validateRadio()" required>
+                                <label for="female">Female</label>
+                                <input type="radio" id="female" name="gender" onfocusout="validateRadio()" required>
+                                <span class="validateRadioError" style="color: red;"></span>
+
+                            </div>
+                            <!-- phone number -->
+                            <div>
+                                <label for="number">Phone Number</label><br>
+                                <input class="inputTag"  type="tel" pattern="[0-9]{10}" placeholder="Phone number"
+                                    id="inputmob" onfocusout="validateMobile()" required><br>
+                                <span class="validateMobileError" style="color: red;"></span>
+
+                            </div>
+                        </div>
+
+                        <!-- email address and permanent address -->
+                        <div class="formatPackage">
+                            <!-- email address -->
+                            <div>
+                                <label for="email">Email Address</label><br>
+                                <input  type="email" placeholder="Email address" id="inputEmail"
+                                onfocusout="validateEmail()" required>
+                                <span class="validateEmailError" style="color: red;"></span>
+
+                            </div>
+                            <!-- username -->
+                            <div>
+                                <label for="username">Username</label><br>
+
+                                <input class="inputTag" type="text" placeholder="Username" id="username">
+                                <span style="color: red;"></span>
+
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="rightSession">
+                        <!-- state and city details -->
+                        <div class="formatPackage2">
+                            <!-- state dropdown -->
+                            <div>
+                                <label for="">Select yor state from the drop down</label><br>
+                                <Select required onfocusout="validateDropdownState()" id="state"
+                                    onchange="populateDistricts()">
+                                    <option value="" selected disabled>Select your state</option>
+                                    <option value="Kerala">Kerala</option>
+                                    <option value="Karnataka">Karnataka</option>
+                                    <option value="TamilNadu">TamilNadu</option>
+                                    <!-- <option value="Maharashtra">Maharashtra</option> -->
+                                </Select>
+                                <span class="validateDropdownErrorState" style="color: red;"></span>
+                            </div>
+                            <!-- city dropdown -->
+                            <div>
+                                <label for="">Select yor city from the drop down</label><br>
+                                <Select required onfocusout="validateDropdownCity()" id="city">
+                                    <option value="" selected disabled>Select your city</option>
+                                    <!-- <option value="Thrissur">Thrissur</option>
+                                    <option value="Wayanad">Wayanad</option>
+                                    <option value="Thiruvanthapuram">Thiruvanthapuram</option>
+                                    <option value="Kochi">Kochi</option> -->
+                                </Select>
+                                <span class="validateDropdownErrorCity" style="color: red;"></span>
+                            </div>
+                        </div>
+
+
+                        <!-- address -->
+                        <div class="addressDiv">
+                            <label for="address">Address</label><br>
+                            <textarea class="inputTagAddress" type="text" onfocusout="validateAddress(this)"
+                                placeholder="Address" id="address" required></textarea>
+                            <!-- By passing this as an argument to the validateAddress function, it will refer to the specific input field that triggered the event.  -->
+                            <span style="color: red;"></span>
+                        </div>
+
+                        <!-- password and confirm password -->
+                        <div class="formatPackage">
+                            <!-- password -->
+                            <div>
+                                <label for="pswd">Password</label><br>
+                                <input  type="password" placeholder="Password" id="inputPswd" onfocusout="validatePswd()">
+                                <span class="inputPswdError" style="color: red;"></span>
+
+                            </div>
+                            <!-- confirm password -->
+                            <div>
+                                <label for="cpswd">Confirm Password</label><br>
+                                <input class="inputTag" type="password" placeholder="Confirm Password" id="cpswd">
+                                <span style="color: red;"></span>
+
+                            </div>
+                        </div>
+                    </div>
+
+
+
 
                 </div>
-                <!-- last name -->
-                <div>
-                    <label for="lastName">Last name:</label>
-
-                    <input class="inputTag" type="text" placeholder="Last name" id="lastName" required>
+                <div class="buttonDiv">
+                    <button class="button" type="button" onclick="register()">Sign Up</button>
 
                 </div>
-                <!-- date of birth -->
-                <div>
-                    <label for="dob">Date of Birth</label>
-
-                    <input class="inputTag" type="date" placeholder="Date of Birth" id="dob" required>
-
-                </div>
-                <!-- age -->
-                <div>
-                    <label for="age">Age</label>
-
-                    <input class="inputTag" type="number" placeholder="Age" id="age" required>
-
-                </div>
-                <!-- gender -->
-                <div>
-                    <label for="gender">Gender</label><br>
-                    <label for="male">Male</label>
-                    <input type="radio" id="male" name="gender" required>
-
-                    <label for="female">Female</label>
-                    <input type="radio" id="female" name="gender" required>
-
-                </div>
-                <!-- phone number -->
-                <div>
-                    <label for="number">Phone Number</label>
-
-                    <input class="inputTag" type="tel" pattern="[0-9]{10}" placeholder="Phone number" id="number"
-                        required>
-
-                </div>
-                <!-- email address -->
-                <div>
-                    <label for="email">Email Address</label>
-
-                    <input class="inputTag" type="email" placeholder="Email address" id="email" required>
-
-                </div>
-                <!-- address -->
-                <div>
-                    <label for="address">Address</label>
-
-                    <textarea class="inputTag" type="text" placeholder="Address" id="address" required></textarea>
-                </div>
-                <!-- state dropdown -->
-                <div>
-                    <label for="">Select yor state from the drop down</label>
-
-                    <Select required>
-                        <option value="" selected disabled>Select your state</option>
-                        <option value="Kerala">Kerala</option>
-                        <option value="Karnataka">Karnataka</option>
-                        <option value="TamilNadu">TamilNadu</option>
-                        <option value="Maharashtra">Maharashtra</option>
-
-                    </Select>
-                </div>
-                <!-- city dropdown -->
-
-                <div>
-                    <label for="">Select yor city from the drop down</label>
-
-                    <Select required>
-                        <option value="" selected disabled>Select your city</option>
-                        <option value="Thrissur">Thrissur</option>
-                        <option value="Wayanad">Wayanad</option>
-                        <option value="Thiruvanthapuram">Thiruvanthapuram</option>
-                        <option value="Kochi">Kochi</option>
-
-                    </Select>
-                </div>
-                <!-- username -->
-                <div>
-                    <label for="username">Username</label>
-
-                    <input class="inputTag" type="text" placeholder="Username" id="username">
-
-                </div>
-                <!-- password -->
-                <div>
-                    <label for="pswd">Password</label>
-
-                    <input class="inputTag" type="password" placeholder="Password" id="pswd">
-
-                </div>
-                <!-- confirm password -->
-                <div>
-                    <label for="cpswd">Confirm Password</label>
-
-                    <input class="inputTag" type="password" placeholder="Confirm Password" id="cpswd">
-                </div>
-<div>
-    <button class="button">Sign Up</button>
-
-</div>
             </form>
         </div>
     </div>
 </body>
+<script src="scriptregistration.js"></script>
 
 </html>

@@ -1,44 +1,147 @@
-*{
+* {
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 20px;
+    padding: 0;
+    margin: 0;
 }
-.heading{
+
+.parentDiv {
+    width: 100%;
+    height: 100vh;
+    /* min-height: 100vh; */
+}
+
+.registerForm {
+    width: 100%;
+    height: 100%;
+    /* background-color:black; */
+    margin: auto;
+    padding: 5% 0%;
+    /* background-color: lightseagreen; */
+background-image: url("https://wallpaperaccess.com/full/185289.jpg");
+background-size: cover;
+ background-attachment: fixed;
+}
+.heading {
     text-align: center;
+    font-size: 45px;
+    font-family: 'EB Garamond', serif;
+}
+.leftRightContainer {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height:auto;
+    background-color: rgba(173, 230, 179, 0.2);
+    justify-content: space-between;
+}
+.leftSession {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    /* padding: 2% 3%; */
+    justify-content: center;
+    background-color: rgba(88, 158, 113, 0.2);
+    margin-right: 10px;
+}
+.formatPackage {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.formatPackage div {
+    flex: 1;
+    margin: 3%;
+}
+.inputTag {
+    width: 80%;
+    padding: 10px;
+    border-radius: 3px;
+    border: none;
+    outline: none;
+    background-color: beige;
+    color: green;
+}
+
+.rightSession {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    /* padding: 2% 3%; */
+    justify-content: center;
+    background-color: rgba(173, 230, 179, 0.2) ;
+
+}
+.formatPackage2 {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.formatPackage2 div {
+    flex: 1;
+    margin: 3%;
 }
 
 /* .registerForm{
     display: flex;
     flex-direction: column;
 } */
-.inputTag{
-    width:100%;
-    padding: 10px;   
+.addressDiv {
+    display: flex;
+    flex-direction: column;
+    margin: 3%;
 }
-Select{
-    width:50%;
-    padding: 10px;   
+
+
+
+.inputTagAddress {
+    width: 50%;
+    padding: 10px;
+    border-radius: 3px;
+    border: none;
+    outline: none;
+    background-color: beige;
+    color: green;
 
 }
-option{
-    width:100%;
+
+Select {
+    width: 100%;
+    padding: 10px;
+    border-radius: 3px;
+    border: none;
+    outline: none;
+    color: green;
 
 }
-.registerForm{
-    width:50%;
-    /* background-color:black; */
+
+option {
+    width: 100%;
+    background-color: beige;
+    color: green;
+
+}
+
+
+
+.button {
+    height: 40px;
+    background-color:rgb(205, 69, 15);
+    border: none;
+    border-radius: 5px;
+    width:100%;
+    font-family: 'EB Garamond', serif;
+    cursor: pointer;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+
+
+.buttonDiv {
+    width: 10%;
     margin: auto;
 }
-.parentDiv{
-    width:100%
-}
-form div{
-    margin-top:20px;
-}
-/* .button{
-    width: 20%;
-    margin: 20px;
-} */
-.button{
-height: 40px;
-background-color: rgb(159, 34, 34);
-border: none;
-}
+

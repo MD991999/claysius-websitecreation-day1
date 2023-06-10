@@ -1,19 +1,186 @@
-body{
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+    /* overflow: hidden; */
+    font-family: 'EB Garamond', serif;
+
+}
+
+body {
+    height:100vh;
     /* background-image: url("https://cdn.pixabay.com/photo/2018/02/02/17/29/nature-3125912_960_720.jpg"); */
 }
-nav{
+
+nav {
     width: 100%;
+    position: fixed;
+    height: 50px;
+    background-color: rgb(144, 238, 144,0.8);
+    top: 0;
+    z-index: 2;
 }
-li{
-    display: inline;
-    margin-left:20px ;
-    margin-right:20px ;
-vertical-align:middle;
+/* .hamburger{
+    display: none;
+
+} */
+
+
+ul {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
 }
-.section{
-    padding:20px;
+
+li {
+    font-size: 20px;
+    font-weight: 600;
+    font-family: 'EB Garamond', serif;
+
 }
-.sectionalDiv{
+
+.section {
+    padding: 10%;
+    width: 100%;
+    height: 80%;
+    background-color: aqua;
+    position: relative;
+
+}
+
+.section div:nth-child(1) {}
+
+.logoImage {
+    width: 10%;
+    mix-blend-mode: multiply;
+
+}
+
+.slider {
+    width: 70%;
+    height: 70%;
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    /* padding: 2%; */
+    top: 15%;
+    left: 15%;
+    /* background-color: blue; */
+}
+
+.slider div {
+    width: 100%;
+    height: 100%;
+    flex: 1;
+    /* background-color: aqua; */
+}
+
+.description {
+    text-align: center;
+    font-size: 25px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    background-color: lightblue;
+    position: relative;
+    animation: sliderDiv 10s 1s linear infinite;
+}
+
+@keyframes sliderDiv {
+    0% {
+        background-color: lightblue;
+
+    }
+
+    20% {
+        background-color: lightcoral;
+    }
+
+    40% {
+        background-color: lightcyan;
+    }
+
+    60% {
+        background-color: lightgoldenrodyellow;
+    }
+
+    80% {
+        background-color: lightgray;
+    }
+
+    100% {
+        background-color: lightgrey;
+    }
+
+}
+
+.description::before {
+    content: "A JOURNEY OF A THOUSAND MILES BEGINS WITH A SINGLE STEP...LIFE BEGINSAT THE END OF YOUR COMFORT ZONE..";
+    animation: slider 10s 1s linear infinite;
+
+}
+
+/* .quotations{
+    animation: slider 2s   1s linear infinite ;
+
+} */
+@keyframes slider {
+    0% {
+        content: "A JOURNEY OF A THOUSAND MILES BEGINS WITH A SINGLE STEP...LIFE BEGINSAT THE END OF YOUR COMFORT ZONE..";
+    }
+
+    20% {
+        content: "IF WE WERE MEANT TO STAY IN ONE PLACE WE'D HAVE ROOTS INSTEAD OF FOOT..       ";
+    }
+
+    40% {
+        content: "I WOULD LIKE TO TRAVEL THE WORLD WITH YOU TWICE.ONCE TO SEE THE WORLD.TWICE TO SEE THE WAY YOU SEE THE WORLD..       ";
+    }
+
+    60% {
+        content: "NOT ALL CLASSROOMS HAVE FOUR WALLS";
+    }
+
+    80% {
+        content: "YOU DON'T NEED A MAGIC TO DISAPPEAR,ALL YOU NEED IS A DESTINATION";
+    }
+
+    100% {
+        content: "A JOURNEY OF A THOUSAND MILES BEGINS WITH A SINGLE STEP...LIFE BEGINSAT THE END OF YOUR COMFORT ZONE..";
+    }
+}
+
+/* .description div {
+    position: absolute;
+    top: 90%;
+    z-index: 1;
+    cursor: pointer;
+} */
+
+.imageFile {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* .sliderImage {
+    width: 90%;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    animation:slider 1s linear infinite;
+    animation-duration:5s;
+}
+ */
+
+
+
+
+
+
+/* .sectionalDiv{
     width:100%;
     background-color: aqua;
     height: 80vh;
@@ -22,23 +189,43 @@ vertical-align:middle;
     display: flex;
     flex-direction: row;
 
-}
-.image-slider{
+} */
+/* .image-slider{
     display: flex;
     flex-direction: row;
-}
-.logoImage{
-    width:5%;
-
-}
-footer{
+} */
+/* footer{
 text-align: center;
+} */
+
+/* @keyframes slider {
+    0%{
+background-image: url("https://upload.wikimedia.org/wikipedia/commons/thumb/e/eb/Machu_Picchu%2C_Peru.jpg/1200px-Machu_Picchu%2C_Peru.jpg");
+    }
+    25%{
+        background-image: url("https://image.cnbcfm.com/api/v1/image/107098862-1659622684655-AP22028253018205.jpg?v=1659622752&w=1920&h=1080");
+  
+    }
+    50%{
+        background-image: url("https://cdn.mos.cms.futurecdn.net/YMa7Wx2FyjQFUjEeqa72Rm.jpg");
+  
+    }
+    75%{
+        background-image: url("https://cdn.britannica.com/57/99557-050-213502D2/Hut-dwellings-Bora-Bora-Society-Islands-French-Polynesia.jpg");
+
+    }
+} */
+/* .slider div:nth-child(2){
+    display: none;
 }
-.slider{
-    width: 100%;
+.slider div:nth-child(3){
+    display: none;
 }
-.slider div{
-    width: 100%;
+.slider div:nth-child(4){
+    display: none;
+}
+.slider div:nth-child(5){
+    display: none;
 }
 .slider div img{
     width: 100%;
@@ -52,4 +239,15 @@ text-align: center;
 }
 .socialMediaIcons div{
 margin-left: 10px;
+}
+footer{
+    bottom:0;
+} */
+footer{
+    /* display: flex;
+    justify-content: center; */
+    margin: auto;
+    bottom: 0;
+    left: 45%;
+    position: absolute;
 }
