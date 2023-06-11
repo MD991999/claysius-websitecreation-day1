@@ -63,7 +63,16 @@ background-size: cover;
     background-color: beige;
     color: green;
 }
+#inputEmail,#inputPswd{
+    width: 80%;
+    padding: 10px;
+    border-radius: 3px;
+    border: none;
+    outline: none;
+    background-color: beige;
+    color: green;
 
+}
 .rightSession {
     flex: 1;
     display: flex;
@@ -141,7 +150,9 @@ option {
 
 
 .buttonDiv {
-    width: 10%;
+    width: 20%;
     margin: auto;
+    display:flex;
+    flex-direction: row;
 }
 

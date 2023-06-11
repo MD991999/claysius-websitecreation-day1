@@ -108,7 +108,9 @@ background-color: black; */
 .buttonAbout {
     margin-top: 20px;
     padding: 20px;
-
+    width: 20%;
+    /* background-color: chocolate; */
+    /* height: auto; */
 }
 
 .buttonAbout button {
@@ -118,6 +120,6 @@ background-color: black; */
     border: 1px solid grey;
     border-radius: 2px;
     padding: 5px;
-    background-color: lightcyan;
+    background-color: rgb(16, 114, 114);
     cursor: pointer;
 }

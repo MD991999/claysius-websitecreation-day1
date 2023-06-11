@@ -57,16 +57,14 @@
                         <span class="validateMessageError" style="color: rgb(207, 55, 55);font-size: 20px;font-weight: 600;"></span>
                     </div>
                     <div class="divButton">
-                        <button class="button" type="button">Submit</button>
+                        <button class="button" type="button" >Submit</button>
+                        <button class="button" type="button" onclick="backButton()" >Back</button>
 
                     </div>
                 </form>
             </div>
             <div class="googleMap">
-                <iframe class="iframeGooglemap"
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d62489.974496527066!2d76.1441390530513!3d11.79154450915616!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba5e16f5a3d78bf%3A0xbde53e7f53775815!2sPulpally%2C%20Kerala%20673579!5e0!3m2!1sen!2sin!4v1686225371919!5m2!1sen!2sin"
-                    style="border:0;" allowfullscreen="" loading="lazy"
-                    referrerpolicy="no-referrer-when-downgrade"></iframe>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d62865.541959147704!2d76.30948080253887!3d10.008897991794658!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b080c8e94a07a07%3A0x49921cdfae82660!2sKakkanad%2C%20Kerala!5e0!3m2!1sen!2sin!4v1686508014407!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
         </div>
         <div class="detailsAdmin">
@@ -146,7 +144,7 @@
         const inputName = document.getElementById('inputName')
         const validateNameError = document.getElementsByClassName('validateNameError')[0]
         if (inputName.value.trim() === "") {
-            validateNameError.textContent = "Message is required."
+            validateNameError.textContent = "Full Name is required."
         }
         else if (!/^[A-Z]/.test(inputName.value.trim())) {
             validateNameError.textContent = "First letter should be capital letter"
@@ -161,14 +159,32 @@
     }
 
 
+    // function sendEmail() {
+    //     const inputEmail=document.getElementById(inputEmail)
+    //     const inputMessage=document.getElementById(inputMessage)
+   
+    //   Email.send({
+    //     Host: "smtp.gmail.com",
+    //     Username: "sender@email_address.com",
+    //     Password: "Enter your password",
+    //     To: 'devassiamichelle9@gmail.com',
+    //     From: inputEmail.value,
+    //     Subject: "To travel",
+    //     Body: inputMessage.value
+    //   })
+    //     .then(function (message) {
+    //       alert("mail sent successfully")
+    //     });
+    // }
 
-
-
-
+function backButton(){
+    window.location="index.html"
+}
 
 
 
 
 </script>
+<script src="https://smtpjs.com/v3/smtp.js"></script>
 
 </html>

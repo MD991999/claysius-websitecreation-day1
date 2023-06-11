@@ -51,10 +51,12 @@
         cursor: pointer;
         font-size: 20px;
         font-weight: 600;
+        margin-right: 2px;
     }
     .buttonDiv {
-        width: 20%;
+        width: 30%;
         margin: auto;
+       
     }
 }
 
@@ -108,13 +110,15 @@
         cursor: pointer;
         font-size: 20px;
         font-weight: 600;
+        margin-right: 2px;
     }
     
     
     
     .buttonDiv {
-        width: 15%;
+        width: 30%;
         margin: auto;
+
     }
     
      
@@ -169,12 +173,13 @@
         cursor: pointer;
         font-size: 20px;
         font-weight: 600;
+        margin-right: 2px;
     }
     
     
     
     .buttonDiv {
-        width: 10%;
+        width: 20%;
         margin: auto;
     }
     

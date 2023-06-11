@@ -236,4 +236,6 @@ function validatePswd() {
 
 
 
-
+function backtoHome(){
+window.location="index.html"
+}
