@@ -3,6 +3,44 @@
 text-decoration:none;
 margin:0;
 padding: 0;
+list-style: none;
+}
+/* header session */
+/* header session */
+.nav {
+    width: 100%;
+    position: fixed;
+    height: 60px;
+    background-color: rgba(157, 186, 196, 0.8);
+    top: 0;
+    z-index: 2;
+}
+
+/* .hamburger{
+    display: none;
+
+} */
+
+
+.ul {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.li {
+    font-size: 20px;
+    font-weight: 600;
+    font-family: 'EB Garamond', serif;
+
+}
+
+
+.logoImage{
+    width: 5%;
+    mix-blend-mode: multiply;
+
 }
 
 
@@ -11,7 +49,8 @@ padding: 0;
     width: 100%;
     padding-left:450px;
     height:80vh;
-    background-color: rgb(15, 39, 38);
+    /* background-color: rgb(15, 39, 38); */
+    background: url('https://www.shutterstock.com/shutterstock/videos/1065225349/preview/stock-footage-summer-tropical-gradient-palm-leaves-frame-template-animated-background-with-copy-space-for-text.webm');
 }
 .login-form{
     display: flex;
@@ -22,7 +61,7 @@ padding: 0;
    width:450px;
 /* height: 75px; */
 height:60vh;
-background-color: lightblue;
+/* background-color: lightblue; */
 border-radius:5px;
 
 }
@@ -84,5 +123,41 @@ color: rgb(3, 9, 11);
 }
 a{
     cursor: pointer;
-
+}
+/* footer */
+.footer{
+    width: 100%;
+    background-color: rgb(157, 216, 216);
+}
+.footer-session-div{
+width: 100%;
+}
+.detailsAdmin {
+    width: 100%;
+    display: flex;
+    margin-top: 50px;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.DetailsofWebsite{
+width: 20%;
+    background-color: rgb(54, 113, 113);
+border-radius: 10%;
+text-align: center;
+margin-bottom: 50px;
+font-size: 20px;
+color: rgb(239, 228, 9);
+}
+.copyright{
+    text-align: center;
+}
+.validateEmailError,.validatePswdError{
+    color: red;
+}
+.spanhidden{
+    visibility: hidden;
+}
+.spanshown{
+    visibility: visible;
+    color: red;
 }

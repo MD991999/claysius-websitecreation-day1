@@ -3,11 +3,60 @@
     font-size: 20px;
     padding: 0;
     margin: 0;
+    text-decoration: none;
+    list-style: none;
+
 }
+
+/* header session */
+.nav {
+    width: 100%;
+    position: fixed;
+    height: 60px;
+    background-color: rgba(157, 186, 196, 0.8);
+    top: 0;
+    z-index: 2;
+}
+
+/* .hamburger{
+    display: none;
+
+} */
+
+
+.ul {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.li {
+    font-size: 20px;
+    font-weight: 600;
+    font-family: 'EB Garamond', serif;
+
+}
+
+
+.logoImage{
+    width: 5%;
+    mix-blend-mode: multiply;
+z-index: 5;
+}
+.body-tag{
+    background-image: url("https://images.unsplash.com/photo-1552733407-5d5c46c3bb3b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxleHBsb3JlLWZlZWR8N3x8fGVufDB8fHx8fA%3D%3D&w=1000&q=80");
+    background-attachment: fixed;
+    background-size: cover;
+
+}
+
 
 .parentDiv {
     width: 100%;
-    height: 100vh;
+    height: 200vh;
+    /* background-image: url("https://wallpaperaccess.com/full/185289.jpg"); */
+
     /* min-height: 100vh; */
 }
 
@@ -18,20 +67,28 @@
     margin: auto;
     padding: 5% 0%;
     /* background-color: lightseagreen; */
-background-image: url("https://wallpaperaccess.com/full/185289.jpg");
-background-size: cover;
- background-attachment: fixed;
+/* background-image: url("https://wallpaperaccess.com/full/185289.jpg"); */
+/* background-size: cover;
+ background-attachment: fixed; */
+}
+.registrationform-form{
+    width: 100%;
+    height:190vh;
+    background-color: rgba(173, 230, 179, 0.2);
 }
 .heading {
     text-align: center;
     font-size: 45px;
     font-family: 'EB Garamond', serif;
+    margin-top: 40px;
 }
 .leftRightContainer {
     display: flex;
     flex-direction: row;
     width: 100%;
     height:auto;
+
+margin: auto;
     background-color: rgba(173, 230, 179, 0.2);
     justify-content: space-between;
 }
@@ -39,7 +96,7 @@ background-size: cover;
     flex: 1;
     display: flex;
     flex-direction: column;
-    /* padding: 2% 3%; */
+    padding: 2% 10%;
     justify-content: center;
     background-color: rgba(88, 158, 113, 0.2);
     margin-right: 10px;
@@ -53,6 +110,13 @@ background-size: cover;
 .formatPackage div {
     flex: 1;
     margin: 3%;
+    /* display: flex;
+    flex-direction: column; */
+}
+.alert-msg,#alert-msg,#alert-msg1{
+    margin-top: 0;
+    margin-bottom: 0;
+    color: red;
 }
 .inputTag {
     width: 80%;
@@ -62,6 +126,16 @@ background-size: cover;
     outline: none;
     background-color: beige;
     color: green;
+}
+#cpswd,#dob{
+    width: 80%;
+    padding: 10px;
+    border-radius: 3px;
+    border: none;
+    outline: none;
+    background-color: beige;
+    color: green;
+
 }
 #inputEmail,#inputPswd{
     width: 80%;
@@ -79,6 +153,8 @@ background-size: cover;
     flex-direction: column;
     /* padding: 2% 3%; */
     justify-content: center;
+    padding: 2% 10%;
+
     background-color: rgba(173, 230, 179, 0.2) ;
 
 }
@@ -116,7 +192,7 @@ background-size: cover;
 
 }
 
-Select {
+.Select {
     width: 100%;
     padding: 10px;
     border-radius: 3px;
@@ -126,7 +202,7 @@ Select {
 
 }
 
-option {
+.option {
     width: 100%;
     background-color: beige;
     color: green;
@@ -156,3 +232,30 @@ option {
     flex-direction: row;
 }
 
+/* footer */
+.footer{
+    width: 100%;
+    background-color: rgb(157, 216, 216);
+}
+.footer-session-div{
+width: 100%;
+}
+.detailsAdmin {
+    width: 100%;
+    display: flex;
+    margin-top: 50px;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.DetailsofWebsite{
+width: 20%;
+    background-color: rgb(54, 113, 113);
+border-radius: 10%;
+text-align: center;
+margin-bottom: 50px;
+font-size: 20px;
+color: rgb(239, 228, 9);
+}
+.copyright{
+    text-align: center;
+}

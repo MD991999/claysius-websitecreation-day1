@@ -11,11 +11,42 @@
 <link href="https://fonts.googleapis.com/css2?family=Acme&family=Cormorant+Infant:ital,wght@1,300;1,500&family=EB+Garamond:wght@400;500&family=Eczar:wght@400;500&family=Fredericka+the+Great&family=Labrada&family=Satisfy&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />   
 <link rel="stylesheet" href="mediaabout.css">
+<!-- <link rel="stylesheet" href="mediawebpage.css"> -->
+<!-- <link rel="stylesheet" href="style.css"> -->
 <title>Document</title>
 </head>
 
-<body>
-    <h1 class="aboutHeading">ABOUT US</h1>
+<body class="body">
+
+    <!-- header -->
+    <header class="header">
+        <nav class="nav">
+            <div >
+                <img class="logoImage" onclick="homebuttonimage()"
+                    src="https://img.freepik.com/premium-vector/detailed-travel-logo_23-2148616612.jpg" alt="">
+                <div class="hamburgar-icon">
+
+                    <i class="fa-solid fa-bars hamburger fa-2xl"></i>
+                </div>
+
+            </div>
+            <ul class="ul">
+                <!-- <li><a href=""><img class="logoImage"
+                            src="https://img.freepik.com/premium-vector/detailed-travel-logo_23-2148616612.jpg"
+                            alt=""></a></li> -->
+                <li class="li"><a href="about.html">About us</a></li>
+                <li class="li"><a href="indexlogin.html">Sign in</a></li>
+                <li class="li"><a href="indexregistration.html">Sign up</a></li>
+                <li class="li"><a href="contact.html">Contact us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+
+
+
+
+    <h1 class="aboutHeading">About us</h1>
 
     <div class="parentContainer">
         <div class="childContainer">
@@ -31,8 +62,8 @@
               
             </div>
             <div class="aboutusDiv">
-                <h3>YATHRA</h3>
-                <h1 class="aboutWebsite">About Us</h1>
+                <h3>Yathra</h3>
+                <h1 class="aboutWebsite">About us</h1>
                 <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsa tempore
                     aspernatur est officiis rem,
                     necessitatibus ea quia iure voluptatibus maxime vitae. Perferendis
@@ -45,13 +76,74 @@
                     cum!</p>
                 
             </div>
-            <div class="buttonAbout">
-                <a style="background-color: rgb(223, 223, 11);" type="button" href="index.html"> &nbsp;Back</a>
-            </div>
+            <!-- <div class="buttonAbout">
+                <button style="background-color: rgb(223, 223, 11);" type="button" onclick="backbutton()"> &nbsp;Back</button>
+            </div> -->
         </div>
     </div>
-    </div>
+
+    <footer class="footer">
+        <div class="footer-session-div">
+            <p class="copyright">Copyright &copy; 2023 Yathra|All rights reserved</p>
+            <!-- <div class="socialMediaIcons">
+            <div>
+                <i class="fa-solid fa-location-dot"></i>
+                <p>Yathra</p>
+                <p>Kakkanad,Kerala</p>
+                <p>Open 24 hours</p>
+            </div>
+            <div>
+                <i class="fa-solid fa-mobile"></i>
+                <p>Call us:9876543210</p>
+            </div>
+            <div>
+                <i class="fa-solid fa-envelope"></i>
+                <p>Email Us:abc@gmail.com</p>
+            </div>
+            <div>
+                <div><i class="fa-brands fa-linkedin"></i></div>
+                <span>LinkedIn</span>
+            </div>
+            <div>
+                <div> <i class="fa-brands fa-facebook"></i>
+                </div>
+                <span>Facebook</span>
+    
+            </div>
+            <div>
+                <div> <i class="fa-brands fa-instagram"></i>
+                </div>
+                <span>Instagram</span>
+            </div>
+        </div> -->
+            <div class="detailsAdmin">
+                <div class="DetailsofWebsite">
+                    <div class="headingAdmindetails"><i class="fa-solid fa-location-dot"></i> Address:</div>
+                    <div class="ii">
+                        <p>Gold tower</p>
+                        <p>Kakkanad</p>
+                        <p>Wayanad</p>
+                    </div>
+
+                </div>
+                <div class="DetailsofWebsite">
+                    <h3 class="headingAdmindetails"><i class="fa-solid fa-phone"></i>Phone:</h3>
+                    <div class="ii">7306946106</div>
+                </div>
+                <div class="DetailsofWebsite">
+                    <h3><i class="fa-solid fa-envelope"></i>Email:</h3>
+                    <p>d@gmail.com</p>
+                </div>
+                <div class="DetailsofWebsite">
+                    <h3><i class="fa-sharp fa-solid fa-globe"></i>Website:</h3>
+                    <p>website.com</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
 
 </body>
-
+<script src="scriptwebpage.js"></script>
+<script src="scriptabout.js"></script>
 </html>

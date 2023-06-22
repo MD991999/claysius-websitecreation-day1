@@ -5,3 +5,7 @@ hamburgerDiv.addEventListener('click',function(){
     ul.classList.toggle('additionalClass')
     // slider.classList.toggle('sectionPart')
 })
+
+function homebuttonimage(){
+    window.location='index.html'
+}

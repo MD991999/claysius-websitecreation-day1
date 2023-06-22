@@ -17,11 +17,11 @@
     <title>Document</title>
 </head>
 
-<body>
+<body class="body">
     <header>
-        <nav>
-            <div>
-                <img class="logoImage"
+        <nav class="nav">
+            <div >
+                <img class="logoImage" onclick="homebuttonimage()"
                     src="https://img.freepik.com/premium-vector/detailed-travel-logo_23-2148616612.jpg" alt="">
                 <div class="hamburgar-icon">
 
@@ -29,19 +29,19 @@
                 </div>
 
             </div>
-            <ul>
+            <ul class="ul">
                 <!-- <li><a href=""><img class="logoImage"
                             src="https://img.freepik.com/premium-vector/detailed-travel-logo_23-2148616612.jpg"
                             alt=""></a></li> -->
-                <li><a href="about.html">About Us</a></li>
-                <li><a href="indexlogin.html">Sign In</a></li>
-                <li><a href="indexregistration.html">Sign Up</a></li>
-                <li><a href="contact.html">Contact Us</a></li>
+                <li class="li"><a href="about.html">About us</a></li>
+                <li class="li"><a href="indexlogin.html">Sign in</a></li>
+                <li class="li"><a href="indexregistration.html">Sign up</a></li>
+                <li class="li"><a href="contact.html">Contact us</a></li>
             </ul>
         </nav>
     </header>
 
-    <section>
+    <section id="section">
         <!-- <div>
             <div><i class="fa-solid fa-arrow-left"></i></div> -->
         <div class="slider">
@@ -59,14 +59,14 @@
         <div>
 
 
-            <h1>WHAT WE OFFER??...</h1>
+            <h1 class="h1">What we offer??...</h1>
 
             <div class="tourDestinations1">
                 <div>
                     <img src="https://knowingcuba.com/uploads/home/vinales.jpg" alt="">
                 </div>
                 <div>
-                    <h1>DAy trip to Vinales Valley</h1>
+                    <h1 class="tourDestinations1-headings">Day trip to Vinales valley</h1>
                     <p>Escape the busy life of Havana and get lost in nature on this day tour. Visit the tobacco
                         plantations of Viñales, where the best tobacco in the world grows. You will stop at a cigar
                         factory to learn about the manual processing of tobacco leaves into cigars. You will also
@@ -76,7 +76,7 @@
             </div>
             <div class="tourDestinations2">
                 <div>
-                    <h1>Varadero Sun Cruise</h1>
+                    <h1 class="tourDestinations1-headings">Varadero sun cruise</h1>
                     <p>Enjoy the breathtaking sceneries, turquoise waters, and occasional sighting of marine life on
                         a catamaran cruise as you sail from Varadero towards Cayo Blanco island for a full day of
                         interaction and swimming with dolphins and water recreation activities. The day cruise
@@ -94,9 +94,10 @@
     </section>
     <!--#include virtual="header.html" -->
 
-    <footer>
-        <p>Copyright &copy; 2023 Yathra|All Rights Reserved</p>
-        <!-- <div class="socialMediaIcons">
+    <footer class="footer">
+        <div class="footer-session-div">
+            <p class="copyright">Copyright &copy; 2023 Yathra|All rights reserved</p>
+            <!-- <div class="socialMediaIcons">
             <div>
                 <i class="fa-solid fa-location-dot"></i>
                 <p>Yathra</p>
@@ -126,8 +127,31 @@
                 </div>
                 <span>Instagram</span>
             </div>
+        </div> -->
+            <div class="detailsAdmin">
+                <div class="DetailsofWebsite">
+                    <div class="headingAdmindetails"><i class="fa-solid fa-location-dot"></i> Address:</div>
+                    <div class="ii">
+                        <p>Gold tower</p>
+                        <p>Kakkanad</p>
+                        <p>Wayanad</p>
+                    </div>
+
+                </div>
+                <div class="DetailsofWebsite">
+                    <h3 class="headingAdmindetails"><i class="fa-solid fa-phone"></i>Phone:</h3>
+                    <div class="ii">7306946106</div>
+                </div>
+                <div class="DetailsofWebsite">
+                    <h3><i class="fa-solid fa-envelope"></i>Email:</h3>
+                    <p>d@gmail.com</p>
+                </div>
+                <div class="DetailsofWebsite">
+                    <h3><i class="fa-sharp fa-solid fa-globe"></i>Website:</h3>
+                    <p>website.com</p>
+                </div>
+            </div>
         </div>
-     -->
     </footer>
 </body>
 <script src="scriptwebpage.js"></script>

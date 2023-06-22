@@ -13,29 +13,59 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Acme&family=Cormorant+Infant:ital,wght@1,300;1,500&family=EB+Garamond:wght@400;500&family=Eczar:wght@400;500&family=Fredericka+the+Great&family=Labrada&family=Satisfy&display=swap"
         rel="stylesheet">
+        <link rel="stylesheet" href="mediawebpage.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
 </head>
 
-<body>
+<body class="body-tag">
+    <!-- header -->
+    <header>
+        <nav class="nav">
+            <div>
+                <img class="logoImage"  onclick="homebuttonimage()"
+                    src="https://img.freepik.com/premium-vector/detailed-travel-logo_23-2148616612.jpg" alt="">
+                <div class="hamburgar-icon">
+
+                    <i class="fa-solid fa-bars hamburger fa-2xl"></i>
+                </div>
+
+            </div>
+            <ul class="ul">
+                <!-- <li><a href=""><img class="logoImage"
+                            src="https://img.freepik.com/premium-vector/detailed-travel-logo_23-2148616612.jpg"
+                            alt=""></a></li> -->
+                <li class="li"><a href="about.html">About us</a></li>
+                <li class="li"><a href="indexlogin.html">Sign in</a></li>
+                <li class="li"><a href="indexregistration.html">Sign up</a></li>
+                <li class="li"><a href="contact.html">Contact us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+
     <div class="parentDiv">
         <div class="registerForm">
-            <h1 class="heading">Registration Form</h1>
-            <form autocomplete="on">
+            <h1 class="heading">Sign up</h1>
+            <form class="registrationform-form" >
                 <div class="leftRightContainer">
                     <div class="leftSession">
                         <!-- firstname and lastname -->
                         <div class="formatPackage">
                             <!-- first name -->
-                            <div>
-                                <label for="firstName">First name:</label><br>
+                            <div class="registration-form-div">
+                                <label for="firstName">First name:</label>
                                 <input class="inputTag" type="text" placeholder="First name" id="firstName" required>
-                                <span style="color: red;"></span>
+                                <div id="alert-msg" ></div>
 
                             </div>
                             <!-- last name -->
                             <div>
-                                <label for="lastName">Last name:</label><br>
+                                <label for="lastName">Last name:</label>
                                 <input class="inputTag" type="text" placeholder="Last name" id="lastName" required>
-                                <span style="color: red;"></span>
+                                <div id="alert-msg" ></div>
 
                             </div>
                         </div>
@@ -44,17 +74,17 @@
                         <div class="formatPackage">
                             <!-- date of birth -->
                             <div>
-                                <label for="dob">Date of Birth</label><br>
-                                <input class="inputTag" type="date" placeholder="Date of Birth" id="dob" required
+                                <label for="dob">Date of birth</label>
+                                <input  type="date" placeholder="Date of Birth" id="dob" required
                                     oninput="ageCalculation()">
-                                <span style="color: red;"></span>
+                                <div id="alert-msg1" ></div>
 
                             </div>
                             <!-- age -->
                             <div>
-                                <label for="age">Age</label><br>
+                              <div><label for="age">Age</label></div>  
                                 <input class="inputTag" type="number" placeholder="Age" id="age" required>
-                                <span style="color: red;"></span>
+                                <div id="alert-msg" ></div>
 
                             </div>
                         </div>
@@ -63,21 +93,21 @@
                         <div class="formatPackage">
                             <!-- gender -->
                             <div>
-                                <label for="gender">Gender</label><br>
+                                <label for="gender">Gender</label>
                                 <!-- <input type="text" onfocusout="validateRadio()"> -->
                                 <label for="male">Male</label>
                                 <input type="radio" id="male" name="gender" onfocusout="validateRadio()" required>
                                 <label for="female">Female</label>
                                 <input type="radio" id="female" name="gender" onfocusout="validateRadio()" required>
-                                <span class="validateRadioError" style="color: red;"></span>
+                                <div  id="alert-msg" class="validateRadioError" ></div>
 
                             </div>
                             <!-- phone number -->
                             <div>
-                                <label for="number">Phone Number</label><br>
+                                <label for="number">Phone number</label>
                                 <input class="inputTag"  type="tel" pattern="[0-9]{10}" placeholder="Phone number"
                                     id="inputmob" onfocusout="validateMobile()" required><br>
-                                <span class="validateMobileError" style="color: red;"></span>
+                                <div id="alert-msg" class="validateMobileError" ></div>
 
                             </div>
                         </div>
@@ -86,18 +116,18 @@
                         <div class="formatPackage">
                             <!-- email address -->
                             <div>
-                                <label for="email">Email Address</label><br>
+                                <label for="email">Email address</label>
                                 <input  type="email" placeholder="Email address" id="inputEmail"
                                 onfocusout="validateEmail()" required>
-                                <span class="validateEmailError" style="color: red;"></span>
+                                <div id="alert-msg" class="validateEmailError"></div>
 
                             </div>
                             <!-- username -->
                             <div>
-                                <label for="username">Username</label><br>
+                                <label for="username">Username</label>
 
                                 <input class="inputTag" type="text" placeholder="Username" id="username">
-                                <span style="color: red;"></span>
+                                <div id="alert-msg" ></div>
 
 
                             </div>
@@ -108,55 +138,55 @@
                         <div class="formatPackage2">
                             <!-- state dropdown -->
                             <div>
-                                <label for="">Select yor state from the drop down</label><br>
-                                <Select required onfocusout="validateDropdownState()" id="state"
+                                <label for="">Select your state from the drop down</label>
+                                <Select class="Select" required onfocusout="validateDropdownState()" id="state"
                                     onchange="populateDistricts()">
-                                    <option value="" selected disabled>Select your state</option>
-                                    <option value="Kerala">Kerala</option>
-                                    <option value="Karnataka">Karnataka</option>
-                                    <option value="TamilNadu">TamilNadu</option>
+                                    <option class="option" value="" selected disabled>Select your state</option>
+                                    <option class="option" value="Kerala">Kerala</option>
+                                    <option class="option" value="Karnataka">Karnataka</option>
+                                    <option class="option" value="TamilNadu">Tamilnadu</option>
                                     <!-- <option value="Maharashtra">Maharashtra</option> -->
                                 </Select>
-                                <span class="validateDropdownErrorState" style="color: red;"></span>
+                                <div id="alert-msg" class="validateDropdownErrorState" ></div>
                             </div>
                             <!-- city dropdown -->
                             <div>
-                                <label for="">Select yor city from the drop down</label><br>
-                                <Select required onfocusout="validateDropdownCity()" id="city">
-                                    <option value="" selected disabled>Select your city</option>
+                                <label for="">Select your city from the drop down</label>
+                                <Select  class="Select" onfocusout="validateDropdownCity()" id="city">
+                                    <option class="option" value="" selected disabled>Select your city</option>
                                     <!-- <option value="Thrissur">Thrissur</option>
                                     <option value="Wayanad">Wayanad</option>
                                     <option value="Thiruvanthapuram">Thiruvanthapuram</option>
                                     <option value="Kochi">Kochi</option> -->
                                 </Select>
-                                <span class="validateDropdownErrorCity" style="color: red;"></span>
+                                <div id="alert-msg" class="validateDropdownErrorCity" ></div>
                             </div>
                         </div>
 
 
                         <!-- address -->
                         <div class="addressDiv">
-                            <label for="address">Address</label><br>
+                            <label for="address">Address</label>
                             <textarea class="inputTagAddress" type="text" onfocusout="validateAddress(this)"
                                 placeholder="Address" id="address" required></textarea>
                             <!-- By passing this as an argument to the validateAddress function, it will refer to the specific input field that triggered the event.  -->
-                            <span style="color: red;"></span>
+                            <div id="alert-msg" ></div>
                         </div>
 
                         <!-- password and confirm password -->
                         <div class="formatPackage">
                             <!-- password -->
                             <div>
-                                <label for="pswd">Password</label><br>
+                                <label for="pswd">Password</label>
                                 <input  type="password" placeholder="Password" id="inputPswd" onfocusout="validatePswd()">
-                                <span class="inputPswdError" style="color: red;"></span>
+                                <div id="alert-msg" class="inputPswdError" ></div>
 
                             </div>
                             <!-- confirm password -->
                             <div>
-                                <label for="cpswd">Confirm Password</label><br>
-                                <input class="inputTag" type="password" placeholder="Confirm Password" id="cpswd">
-                                <span style="color: red;"></span>
+                                <label for="cpswd">Confirm password</label>
+                                <input  type="password" placeholder="Confirm password" id="cpswd" onfocusout="confirmvalidatePswd()">
+                                <div id="alert-msg" class="inputCPswdError" ></div>
 
                             </div>
                         </div>
@@ -167,14 +197,73 @@
 
                 </div>
                 <div class="buttonDiv">
-                    <button class="button" type="button" onclick="register()">Sign Up</button>
+                    <button class="button" type="button" onclick="register()">Sign up</button>
                     <button class="button" type="button" onclick="backtoHome()">Back</button>
 
                 </div>
             </form>
         </div>
     </div>
+    <footer class="footer">
+        <div class="footer-session-div">
+            <p class="copyright">Copyright &copy; 2023 Yathra|All rights reserved</p>
+            <!-- <div class="socialMediaIcons">
+            <div>
+                <i class="fa-solid fa-location-dot"></i>
+                <p>Yathra</p>
+                <p>Kakkanad,Kerala</p>
+                <p>Open 24 hours</p>
+            </div>
+            <div>
+                <i class="fa-solid fa-mobile"></i>
+                <p>Call us:9876543210</p>
+            </div>
+            <div>
+                <i class="fa-solid fa-envelope"></i>
+                <p>Email Us:abc@gmail.com</p>
+            </div>
+            <div>
+                <div><i class="fa-brands fa-linkedin"></i></div>
+                <span>LinkedIn</span>
+            </div>
+            <div>
+                <div> <i class="fa-brands fa-facebook"></i>
+                </div>
+                <span>Facebook</span>
+    
+            </div>
+            <div>
+                <div> <i class="fa-brands fa-instagram"></i>
+                </div>
+                <span>Instagram</span>
+            </div>
+        </div> -->
+            <div class="detailsAdmin">
+                <div class="DetailsofWebsite">
+                    <div class="headingAdmindetails"><i class="fa-solid fa-location-dot"></i> Address:</div>
+                    <div class="ii">
+                        <p>Gold tower</p>
+                        <p>Kakkanad</p>
+                        <p>Wayanad</p>
+                    </div>
+
+                </div>
+                <div class="DetailsofWebsite">
+                    <h3 class="headingAdmindetails"><i class="fa-solid fa-phone"></i>Phone:</h3>
+                    <div class="ii">7306946106</div>
+                </div>
+                <div class="DetailsofWebsite">
+                    <h3><i class="fa-solid fa-envelope"></i>Email:</h3>
+                    <p>d@gmail.com</p>
+                </div>
+                <div class="DetailsofWebsite">
+                    <h3><i class="fa-sharp fa-solid fa-globe"></i>Website:</h3>
+                    <p>website.com</p>
+                </div>
+            </div>
+        </div>
+    </footer>
 </body>
 <script src="scriptregistration.js"></script>
-
+<script src="scriptwebpage.js"></script>
 </html>

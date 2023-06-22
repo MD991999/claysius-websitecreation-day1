@@ -5,25 +5,24 @@
     list-style: none;
     /* overflow: hidden; */
     font-family: 'EB Garamond', serif;
-
 }
 
-body {
+.body {
     height: 100vh;
     overflow-x: hidden;
     /* background-image: url("https://cdn.pixabay.com/photo/2018/02/02/17/29/nature-3125912_960_720.jpg"); */
 }
 
-section {
+#section {
     width: 100%;
     height: 100vh;
 }
 
-nav {
+.nav {
     width: 100%;
     position: fixed;
     height: 60px;
-    background-color: rgb(144, 238, 144, 0.8);
+    background-color: rgba(157, 186, 196, 0.8);
     top: 0;
     z-index: 2;
 }
@@ -34,20 +33,26 @@ nav {
 } */
 
 
-ul {
+.ul {
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
 }
 
-li {
+.li {
     font-size: 20px;
     font-weight: 600;
     font-family: 'EB Garamond', serif;
 
 }
 
+
+.logoImage{
+    width: 5%;
+    mix-blend-mode: multiply;
+
+}
 .section {
     padding: 10%;
     width: 100%;
@@ -58,12 +63,6 @@ li {
 }
 
 .section div:nth-child(1) {}
-
-.logoImage{
-    width: 5%;
-    mix-blend-mode: multiply;
-
-}
 
 .slider {
     width: 70%;
@@ -97,35 +96,38 @@ li {
 
 @keyframes sliderDiv {
     0% {
-        background-color: lightblue;
+        background-color: rgb(144, 194, 211);
 
     }
 
     20% {
         background-color: lightcoral;
+
     }
 
     40% {
-        background-color: lightcyan;
+        background-color: rgb(178, 208, 208);
+
     }
 
     60% {
-        background-color: lightgoldenrodyellow;
+        background-color: rgb(217, 217, 156);
+
     }
 
     80% {
-        background-color: lightgray;
+        background-color: rgb(173, 152, 152);
     }
 
     100% {
-        background-color: lightgrey;
+        background-color: rgb(103, 97, 97);
     }
 
 }
 
 .description::before {
-    content: "A JOURNEY OF A THOUSAND MILES BEGINS WITH A SINGLE STEP...LIFE BEGINSAT THE END OF YOUR COMFORT ZONE..";
-    animation: slider 10s 1s linear infinite;
+    content: "A journey of a thousand miles begins with asingle step...Life begins at the end of your comfort zone...";
+    animation: slider 12s 1s linear infinite;
 
 }
 
@@ -135,27 +137,32 @@ li {
 } */
 @keyframes slider {
     0% {
-        content: "A JOURNEY OF A THOUSAND MILES BEGINS WITH A SINGLE STEP...LIFE BEGINSAT THE END OF YOUR COMFORT ZONE..";
+        content: "A journey of a thousand miles begins with asingle step...Life begins at the end of your comfort zone...";
     }
 
     20% {
-        content: "IF WE WERE MEANT TO STAY IN ONE PLACE WE'D HAVE ROOTS INSTEAD OF FOOT..       ";
+        content: "If we were meant to stay in one place, we'd have roots instead of foot...       ";
+
     }
 
     40% {
-        content: "I WOULD LIKE TO TRAVEL THE WORLD WITH YOU TWICE.ONCE TO SEE THE WORLD.TWICE TO SEE THE WAY YOU SEE THE WORLD..       ";
+        content: "I would like to travel the world with you twice..Once to see the world...Twice to see the way you see the world...       ";
+
     }
 
     60% {
-        content: "NOT ALL CLASSROOMS HAVE FOUR WALLS";
+        content: "Not all classrooms have walls";
+
     }
 
     80% {
-        content: "YOU DON'T NEED A MAGIC TO DISAPPEAR,ALL YOU NEED IS A DESTINATION";
+        content: "You don't need a magic to dissappear,all you need is a destination";
+
     }
 
     100% {
-        content: "A JOURNEY OF A THOUSAND MILES BEGINS WITH A SINGLE STEP...LIFE BEGINSAT THE END OF YOUR COMFORT ZONE..";
+        content: "A journey of a thousand miles  begins with a single step...Life begins at the end of your comfort zone...";
+
     }
 }
 
@@ -250,13 +257,13 @@ margin-left: 10px;
 footer{
     bottom:0;
 } */
-footer {
+.footer {
     /* display: flex;
     justify-content: center; */
-    margin: auto;
-    bottom: 0;
-    left: 45%;
-    position: absolute;
+    /* margin: auto; */
+    /* bottom: 0;
+    /* left: 45%; */
+    /* position: absolute;  */
 }
 
 
@@ -268,7 +275,7 @@ footer {
     background-color: lightblue;
 }
 
-h1 {
+.tourDestinations1-headings {
     text-align: center;
     font-size: 40px;
 }
@@ -343,4 +350,37 @@ h1 {
     font-family: 'EB Garamond', serif;
     font-weight: 500;
     color: crimson;
+}
+/* footer */
+.footer{
+    width: 100%;
+    background-color: rgb(157, 216, 216);
+    overflow-x: hidden;
+}
+.footer-session-div{
+width: 100%;
+}
+.detailsAdmin {
+    width: 100%;
+    display: flex;
+    margin-top: 50px;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 5px;
+}
+.DetailsofWebsite{
+width: 20%;
+    background-color: rgb(54, 113, 113);
+border-radius: 10%;
+text-align: center;
+margin-bottom: 50px;
+font-size: 20px;
+color: rgb(239, 228, 9);
+}
+.copyright{
+    text-align: center;
+}
+.h1{
+    text-align: center;
+    font-size: 65px;
 }

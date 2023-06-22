@@ -1,13 +1,21 @@
 // 
 const inputTags = document.getElementsByClassName("inputTag")
 console.log(inputTags);
-
+// "letters-only" or "alphabetic characters only"
+const format = /^[a-zA-z]+$/
+// --/--beginning and end of the pattern,^--check whether string follows given patter,
+// 
 // give onfocusout validation to each input fields
 for (let i = 0; i < inputTags.length; i++) {
   inputTags[i].addEventListener("focusout", function () {
     // logic
     if (this.value.trim() === "") {
       this.nextElementSibling.textContent = "Field is required";
+      // parentdiv.style.height="50px"
+    }
+    else if (!format.test(this.value.trim())) {
+      this.nextElementSibling.textContent = "Invalid format";
+
     }
     else {
       this.nextElementSibling.textContent = "";
@@ -25,6 +33,7 @@ function validateAddress(element)
 {
   if (element.value.trim() === "") {
     element.nextElementSibling.textContent = "Field is required";
+    // parentdiv.style.height="50px"
 
   }
   else {
@@ -50,6 +59,8 @@ function validateRadio() {
 
   if (!checked) {
     errorSpan.textContent = "Please select a gender.";
+    // parentdiv.style.height="50px"
+
   } else {
     errorSpan.textContent = "";
   }
@@ -63,6 +74,8 @@ function validateDropdownState() {
 
   if (dropdown.value === "") {
     errorSpan.textContent = "Please select a state.";
+    // parentdiv.style.height="50px"
+
   } else {
     errorSpan.textContent = "";
   }
@@ -74,6 +87,8 @@ function validateDropdownCity() {
 
   if (dropdown.value === "") {
     errorSpan.textContent = "Please select a state.";
+    // parentdiv.style.height="50px"
+
   } else {
     errorSpan.textContent = "";
   }
@@ -82,18 +97,21 @@ function validateDropdownCity() {
 function ageCalculation() {
   const dob = document.getElementById("dob");
   const age = document.getElementById("age");
+  const alertmsg = document.getElementById("alert-msg1")
   const dateOfBirth = new Date(dob.value);
   const presentDate = new Date();
   let realAge = presentDate.getFullYear() - dateOfBirth.getFullYear();
-
-  if (
+  if (dateOfBirth > presentDate) {
+    alertmsg.textContent = 'Please enter a valid date'
+    return;
+  }
+  else if (
     dateOfBirth.getMonth() > presentDate.getMonth() ||
     (dateOfBirth.getMonth() === presentDate.getMonth() &&
       dateOfBirth.getDate() > presentDate.getDate())
   ) {
     realAge--;
   }
-
   age.value = realAge;
 }
 
@@ -162,12 +180,16 @@ function validateMobile() {
   const inputMob = document.getElementById("inputmob")
   const validateMobileError = document.getElementsByClassName("validateMobileError")[0]
   if (inputMob.value.trim() === "") {
-    validateMobileError.textContent = "Mobile Number is required"
+    validateMobileError.textContent = "Mobile number is required"
+    // parentdiv.style.height="50px"
+
   }
   else if (!inputMob.checkValidity())
   // It also uses the checkValidity() method to verify if the entered value matches the specified pattern ([0-9]{10}) for a 10-digit mobile number.
   {
     validateMobileError.textContent = "Invalid mobile number.";
+    // parentdiv.style.height="50px"
+
   } else {
     validateMobileError.textContent = "";
   }
@@ -181,10 +203,14 @@ function validateEmail() {
 
   if (inputEmail.value.trim() === "") {
     errorSpan.textContent = "Email address is required.";
+    // parentdiv.style.height="50px"
+
   } else if (!emailpattern.test(inputEmail.value.trim()))
   //   The test method is used to test if a string matches a regular expression. It returns true if the pattern is found in the string, and false otherwise.
   {
     errorSpan.textContent = "Invalid email address.";
+    // parentdiv.style.height="50px"
+
   } else {
     errorSpan.textContent = "";
   }
@@ -206,26 +232,29 @@ function validatePswd() {
   const symbolRegex = /[!@#$%^&*]/; // At least one symbol
   if (inputPswd.value === "") {
     inputPswdError.innerHTML = "Password is required"
+    // parentdiv.style.height="50px"
+
     // console.log(inputEmailError.textContent);
   }
   else if (!min8.test(inputPswd.value)) {
     inputPswdError.innerHTML = "Minimum 8 character is required"
-
   }
   else if (!capitalLetter.test(inputPswd.value)) {
-    inputPswdError.innerHTML = "atleast one capital letter is required"
+    inputPswdError.innerHTML = "Atleast one capital letter is required"
+
 
   }
   else if (!smallLetter.test(inputPswd.value)) {
-    inputPswdError.innerHTML = "atleast on small letter is required"
+    inputPswdError.innerHTML = "Atleast on small letter is required"
+
 
   }
   else if (!number.test(inputPswd.value)) {
-    inputPswdError.innerHTML = "atleast one number is required"
+    inputPswdError.innerHTML = "Atleast one number is required"
 
   }
   else if (!symbolRegex.test(inputPswd.value)) {
-    inputPswdError.innerHTML = "atleast one symbol is required"
+    inputPswdError.innerHTML = "Atleast one symbol is required"
 
   }
 
@@ -234,8 +263,28 @@ function validatePswd() {
   }
 }
 
+function confirmvalidatePswd() {
+  const inputPswd = document.getElementById("inputPswd")
+  console.log(inputPswd.value);
 
+  const inputcpswd = document.getElementById("cpswd")
+  console.log(inputPswd.value);
 
-function backtoHome(){
-window.location="index.html"
+  const inputCPswdError = document.getElementsByClassName("inputCPswdError")[0]
+
+  if (inputcpswd.value !== inputPswd.value) {
+    inputCPswdError.innerHTML = 'Password doesnt match'
+  }
+  else if (inputcpswd.value == '') {
+    inputCPswdError.innerHTML = 'Password should match'
+
+  }
+  else {
+    inputCPswdError.innerHTML = ''
+
+  }
+}
+
+function backtoHome() {
+  window.location = "index.html"
 }

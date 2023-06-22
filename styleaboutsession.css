@@ -1,9 +1,46 @@
 * {
     margin: 0;
     padding: 0;
+    list-style: none;
+    text-decoration: none;
 }
-body{
+.body{
     background-color: rgb(123, 143, 178);
+
+}
+.nav {
+    width: 100%;
+    position: fixed;
+    height: 60px;
+    background-color: rgba(157, 186, 196, 0.8);
+    top: 0;
+    z-index: 100;
+}
+
+/* .hamburger{
+    display: none;
+
+} */
+
+
+.ul {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.li {
+    font-size: 20px;
+    font-weight: 600;
+    font-family: 'EB Garamond', serif;
+
+}
+
+
+.logoImage{
+    width: 5%;
+    mix-blend-mode: multiply;
 
 }
 
@@ -83,7 +120,7 @@ top: 15%;
     /* font-size: 14px; */
     width: 35%;
     right: 5%;
-    z-index: 3;
+    z-index: 5;
     top: 55%;
     background-color:rgb(255,255,255);
     background-image: url("https://image.jimcdn.com/app/cms/image/transf/none/path/sa6549607c78f5c11/image/i5f18bffcfae8e73e/version/1606405693/best-natural-wonders-in-germany-lake-hintersee-copyright-claudiu-maxim-european-best-destinations.jpg");
@@ -122,4 +159,31 @@ background-color: black; */
     padding: 5px;
     background-color: rgb(16, 114, 114);
     cursor: pointer;
+}
+/* footer */
+.footer{
+    width: 100%;
+    background-color: rgb(157, 216, 216);
+}
+.footer-session-div{
+width: 100%;
+}
+.detailsAdmin {
+    width: 100%;
+    display: flex;
+    margin-top: 50px;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.DetailsofWebsite{
+width: 20%;
+    background-color: rgb(54, 113, 113);
+border-radius: 10%;
+text-align: center;
+margin-bottom: 50px;
+font-size: 20px;
+color: rgb(239, 228, 9);
+}
+.copyright{
+    text-align: center;
 }

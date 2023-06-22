@@ -1,9 +1,9 @@
 @media(max-width:576px) {
-   body{
+   .body{
     width: 100%;
     overflow-x: hidden;
    }
-    ul {
+    .ul {
         display: none;
 
     }
@@ -17,8 +17,11 @@
         top:45%;
        
     }
-
-    li {
+    .h1{
+        text-align: center;
+        font-size: 35px;
+    }
+    .li {
         font-size: 20px;
         font-weight: 600;
         font-family: 'EB Garamond', serif;
@@ -70,14 +73,12 @@
         object-fit: cover;
         
     }
-    footer{
-        /* display: flex;
-        justify-content: center; */
+    /* footer{
         margin: auto;
         bottom: 0;
         left: 20%;
         position: relative;
-    }
+    } */
 
 
     .section2 {
@@ -87,7 +88,7 @@
         overflow-x: hidden;
     }
     
-    h1 {
+    .tourDestinations1-headings {
         text-align: center;
         font-size: 35px;
     }
@@ -186,7 +187,7 @@
 
 }
 @media(min-width:576px){
-    body{
+    .body{
         width: 100%;
         overflow-x: hidden;
        }
@@ -199,7 +200,7 @@
         mix-blend-mode: multiply;
     
     }
-    ul {
+    .ul {
         /* flex-direction: row; */
         /* align-items: center; */
         /* justify-content: space-between; */
@@ -208,7 +209,7 @@
         top:10px;
         right: 0;
     }
-    li{
+    .li{
 margin-right: 40px;
     }
     .slider {
@@ -222,7 +223,7 @@ margin-right: 40px;
         left: 7%;
         /* background-color: blue; */
     }
-    footer{
+    .footer{
     
         /* margin: auto;
         bottom: 0;
@@ -242,7 +243,7 @@ margin-right: 40px;
         background-color: lightblue;
     }
     
-    h1 {
+    .tourDestinations1-headings{
         text-align: center;
         font-size: 30px;
     }
@@ -345,23 +346,21 @@ margin-right: 40px;
 
 }
 @media(min-width:756px){
-    body{
+    .body{
         width: 100%;
         overflow-x: hidden;
        }
     
-    footer{
-        /* display: flex;
-        justify-content: center; */
+    /* footer{
         margin: auto;
         bottom: 0;
         left: 30%;
         position: relative;
-    }
+    } */
     .logoImage {
-        width: 7%;
+        width: 5%;
         mix-blend-mode: multiply;
-    
+    margin: 5px 5px;
     }
     .imageFile {
         width: 100%;
@@ -377,7 +376,7 @@ margin-right: 40px;
         background-color: lightblue;
     }
     
-    h1 {
+    .tourDestinations1-headings {
         text-align: center;
         font-size: 40px;
     }
@@ -477,15 +476,15 @@ margin-right: 40px;
 
 }
 @media(min-width:992px){
-    body{
+    .body{
         width: 100%;
         overflow-x: hidden;
        }
     
     .logoImage {
-        width: 6%;
+        width: 4%;
         mix-blend-mode: multiply;
-    
+    margin: 5px 5px;
     }
     .imageFile {
         width: 100%;
@@ -493,14 +492,12 @@ margin-right: 40px;
         object-fit: contain;
         
     }
-    footer{
-        /* display: flex;
-        justify-content: center; */
+    /* footer{
         margin: auto;
         bottom: 0;
         left: 35%;
         position: relative;
-    }
+    } */
 
 
 
@@ -512,7 +509,7 @@ margin-right: 40px;
         background-color: lightblue;
     }
     
-    h1 {
+    .tourDestinations1-headings {
         text-align: center;
         font-size: 40px;
     }
@@ -596,16 +593,16 @@ margin-right: 40px;
 
 }
 @media(min-width:1200px){
-    body{
+    .body{
         width: 100%;
         overflow-x: hidden;
        }
     
-    nav {
+    .nav {
         width: 100%;
         position: fixed;
         height: 70px;
-        background-color: rgb(144, 238, 144,0.8);
+        background-color: rgba(157, 186, 196, 0.8);
         top: 0;
         z-index: 2;
     }
@@ -615,14 +612,14 @@ margin-right: 40px;
     } */
     
     
-    ul {
+    .ul {
         display: flex;
         flex-direction: row;
         align-items: center;
         justify-content: space-between;
     }
     
-    li {
+    .li {
         font-size: 20px;
         font-weight: 600;
         font-family: 'EB Garamond', serif;
@@ -640,9 +637,9 @@ margin-right: 40px;
     
     
     .logoImage {
-        width: 5%;
+        width: 4%;
         mix-blend-mode: multiply;
-    
+    margin: 5px 5px;
     }
     
     .slider {
@@ -674,15 +671,13 @@ margin-right: 40px;
         position: relative;
         animation: sliderDiv 10s 1s linear infinite;
     }
-    footer{
-        /* display: flex;
-        justify-content: center; */
+    /* footer{
         margin: auto;
         bottom: 0;
         left: 45%;
         position: relative;
         
-    }
+    } */
     
     .section2 {
         width: 100%;
@@ -690,7 +685,7 @@ margin-right: 40px;
         background-color: lightblue;
     }
     
-    h1 {
+    .tourDestinations1-headings {
         text-align: center;
         font-size: 40px;
     }

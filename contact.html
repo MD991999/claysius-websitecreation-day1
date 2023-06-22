@@ -16,13 +16,38 @@
         rel="stylesheet">
     <link rel="stylesheet" href="stylecontactsession.css">
     <link rel="stylesheet" href="mediacontact.css">
+    <link rel="stylesheet" href="mediawebpage.css">
     <title>Contact Us</title>
 </head>
 
-<body>
+<body class="body">
+    <!-- header -->
+    <header>
+        <nav class="nav">
+            <div >
+                <img class="logoImage" onclick="homebuttonimage()"
+                    src="https://img.freepik.com/premium-vector/detailed-travel-logo_23-2148616612.jpg" alt="">
+                <div class="hamburgar-icon">
+
+                    <i class="fa-solid fa-bars hamburger fa-2xl"></i>
+                </div>
+
+            </div>
+            <ul class="ul">
+                <!-- <li><a href=""><img class="logoImage"
+                            src="https://img.freepik.com/premium-vector/detailed-travel-logo_23-2148616612.jpg"
+                            alt=""></a></li> -->
+                <li class="li"><a href="about.html">About us</a></li>
+                <li class="li"><a href="indexlogin.html">Sign in</a></li>
+                <li class="li"><a href="indexregistration.html">Sign up</a></li>
+                <li class="li"><a href="contact.html">Contact us</a></li>
+            </ul>
+        </nav>
+    </header>
+
 
     <div class="conatactContainer">
-        <h1 class="headingContactsession">Contact Us</h1>
+        <h1 class="headingContactsession">Contact us</h1>
 
         <div class="parentdivContactsession">
             <div class="formTagDiv">
@@ -30,31 +55,31 @@
                     <!-- full name -->
 
                     <div>
-                        <label for="fullname" class="inputTagname">Full Name:</label><br>
-                        <input class="inputFullname" type="text" placeholder="Full Name" name="fullname" id="inputName"
+                        <label for="fullname" class="inputTagname">Full name:</label><br>
+                        <input class="inputFullname" type="text" placeholder="Full name" name="fullname" id="inputName"
                             onfocusout="validateName()"><br>
-                        <span class="validateNameError" style="color:  rgb(207, 55, 55);font-size: 20px;font-weight: 600;"></span>
+                        <span class="validateNameError"></span>
                     </div>
                     <!-- email -->
                     <div>
                         <label for="email" class="inputTagname">Email</label><br>
-                        <input type="email" placeholder="email" name="email" id="inputEmail"
+                        <input type="email" placeholder="Email" name="email" id="inputEmail"
                             onfocusout="validateEmail()"><br>
-                        <span class="validateEmailError" style="color: rgb(207, 55, 55);font-size: 20px;font-weight: 600;"></span>
+                        <span class="validateEmailError"></span>
                     </div>
                     <!-- mobile -->
                     <div>
                         <label for="mob" class="inputTagname">Mobile</label><br>
-                        <input type="tel" pattern="[0-9]{10}" placeholder="Mobile Number" name="mob" id="inputmob"
+                        <input type="tel" pattern="[0-9]{10}" placeholder="Mobile number" name="mob" id="inputmob"
                             onfocusout="validateMobile()"><br>
-                        <span class="validateMobileError" style="color: rgb(207, 55, 55);font-size: 20px;font-weight: 600;"></span>
+                        <span class="validateMobileError"></span>
                     </div>
                     <!-- message -->
                     <div>
                         <label for="text" class="inputTagname">Message</label><br>
                         <textarea cols="30" rows="3" placeholder="Message" id="inputMessage"
                             onfocusout="validateMessage()"></textarea><br>
-                        <span class="validateMessageError" style="color: rgb(207, 55, 55);font-size: 20px;font-weight: 600;"></span>
+                        <span class="validateMessageError"></span>
                     </div>
                     <div class="divButton">
                         <button class="button" type="button" >Submit</button>
@@ -71,7 +96,7 @@
             <div class="DetailsofWebsite">
                 <div class="headingAdmindetails"><i class="fa-solid fa-location-dot"></i> Address:</div>
                 <div class="ii">
-                    <p>Gold Tower</p>
+                    <p>Gold tower</p>
                     <p>Kakkanad</p>
                     <p>Wayanad</p>
                 </div>
@@ -92,99 +117,8 @@
         </div>
     </div>
 </body>
-<script>
-    // JavaScript
-    // email-validation
-    function validateEmail() {
-        const inputEmail = document.getElementById("inputEmail");
-        const errorSpan = document.querySelector(".validateEmailError");
-        const emailpattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-
-        if (inputEmail.value.trim() === "") {
-            errorSpan.textContent = "Email address is required.";
-        } else if (!emailpattern.test(inputEmail.value.trim()))
-        //   The test method is used to test if a string matches a regular expression. It returns true if the pattern is found in the string, and false otherwise.
-        {
-            errorSpan.textContent = "Invalid email address.";
-        } else {
-            errorSpan.textContent = "";
-        }
-    }
-
-    // mobile validation
-    function validateMobile() {
-        const inputMob = document.getElementById("inputmob")
-        const validateMobileError = document.getElementsByClassName("validateMobileError")[0]
-        if (inputMob.value.trim() === "") {
-            validateMobileError.textContent = "Mobile Number is required"
-        }
-        else if (!inputMob.checkValidity())
-        // It also uses the checkValidity() method to verify if the entered value matches the specified pattern ([0-9]{10}) for a 10-digit mobile number.
-        {
-            validateMobileError.textContent = "Invalid mobile number.";
-        } else {
-            validateMobileError.textContent = "";
-        }
-    }
-    // message validation
-    function validateMessage() {
-        const inputMessage = document.getElementById('inputMessage')
-        const validateMessageError = document.getElementsByClassName('validateMessageError')[0]
-        if (inputMessage.value.trim() === "") {
-            validateMessageError.textContent = "Message is required."
-        }
-        else {
-            validateMessageError.textContent = ""
-
-        }
-    }
-    // name validation
-    function validateName() {
-
-        const inputName = document.getElementById('inputName')
-        const validateNameError = document.getElementsByClassName('validateNameError')[0]
-        if (inputName.value.trim() === "") {
-            validateNameError.textContent = "Full Name is required."
-        }
-        else if (!/^[A-Z]/.test(inputName.value.trim())) {
-            validateNameError.textContent = "First letter should be capital letter"
-
-        }
-        else {
-            validateNameError.textContent = ""
-
-        }
-
-
-    }
-
-
-    // function sendEmail() {
-    //     const inputEmail=document.getElementById(inputEmail)
-    //     const inputMessage=document.getElementById(inputMessage)
-   
-    //   Email.send({
-    //     Host: "smtp.gmail.com",
-    //     Username: "sender@email_address.com",
-    //     Password: "Enter your password",
-    //     To: 'devassiamichelle9@gmail.com',
-    //     From: inputEmail.value,
-    //     Subject: "To travel",
-    //     Body: inputMessage.value
-    //   })
-    //     .then(function (message) {
-    //       alert("mail sent successfully")
-    //     });
-    // }
-
-function backButton(){
-    window.location="index.html"
-}
-
-
-
-
+<script src="scriptcontact.js">
 </script>
 <script src="https://smtpjs.com/v3/smtp.js"></script>
-
+<script src="scriptwebpage.js"></script>
 </html>
